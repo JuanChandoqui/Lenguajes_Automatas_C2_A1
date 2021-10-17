@@ -1,7 +1,7 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QMainWindow
-from PyQt5 import uic 
-
+from PyQt5 import uic
+from Models.read_RE import getStatus 
 
 class Window(QMainWindow):
     def __init__(self):
@@ -11,11 +11,9 @@ class Window(QMainWindow):
     
     def isClickedButtonOk(self):
         text = self.input_text.text()
-        status = True #TODO: IMPLEMENT THE REGULAR EXPRESSION STATUS, IF IS TRUE OR IS FALSE
+        status = getStatus(text)
 
-        print(text)
-
-        if(status):
+        if(status and len(text)==18):
             self.label_status.setText('CLABE VÁLIDA')
             self.label_status.setStyleSheet('background-color: green; color: white; font-size: 12px; font-weight: bold')
         else:

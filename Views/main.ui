@@ -76,7 +76,7 @@ font: 75 12pt &quot;MS Shell Dlg 2&quot;;</string>
      <string/>
     </property>
     <property name="placeholderText">
-     <string>Ejemplo: </string>
+     <string>Ejemplo: 002960123456789125</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_status">
